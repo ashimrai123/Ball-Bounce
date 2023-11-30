@@ -32,11 +32,12 @@ function draw() {
 
         ball.x += ball.dx;
         ball.y += ball.dy;
-
+         // Collision with the horizontal walls
         if (ball.x + ball.radius > canvasWidth || ball.x - ball.radius < 0) {
             ball.dx = -ball.dx;
         }
 
+        // Check for collision with the vertical walls
         if (ball.y + ball.radius > canvasHeight || ball.y - ball.radius < 0) {
             ball.dy = -ball.dy;
         }
